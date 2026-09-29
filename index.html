@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jeanpierre | Ingeniería de Sistemas</title>
+<meta name="description" content="Portafolio de Jeanpierre, estudiante de Ingeniería de Sistemas: datos, procesos y electrónica.">
+<style>
+  :root {
+    --bg: #ffffff; --surface: #f4f6fa; --text: #1a1d24;
+    --muted: #5b6474; --accent: #2563eb; --border: #e2e6ee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1218; --surface: #181d27; --text: #eef1f6;
+      --muted: #9aa4b5; --accent: #6ea0ff; --border: #262d3a;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.6;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+  nav {
+    position: sticky; top: 0; background: var(--bg);
+    border-bottom: 1px solid var(--border); z-index: 10;
+  }
+  nav .wrap { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+  nav a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: 15px; }
+  nav a:hover { color: var(--accent); }
+  nav .logo { color: var(--text); font-weight: 700; margin: 0; }
+  header.hero { padding: 96px 0 64px; }
+  .hero .tag { color: var(--accent); font-weight: 600; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
+  .hero h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.1; margin: 12px 0 20px; }
+  .hero p { color: var(--muted); font-size: 1.15rem; max-width: 620px; }
+  .btns { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    padding: 12px 22px; border-radius: 10px; text-decoration: none;
+    font-weight: 600; font-size: 15px; border: 1px solid var(--border); color: var(--text);
+  }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  section { padding: 56px 0; }
+  section h2 { font-size: 1.7rem; margin-bottom: 8px; }
+  section .sub { color: var(--muted); margin-bottom: 32px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 16px; padding: 28px; margin-bottom: 20px;
+  }
+  .card h3 { font-size: 1.25rem; margin-bottom: 4px; }
+  .card .meta { color: var(--muted); font-size: 14px; margin-bottom: 14px; }
+  .card p { margin-bottom: 10px; }
+  .card ul { margin: 8px 0 12px 20px; }
+  .card li { margin-bottom: 4px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .chip {
+    background: var(--bg); border: 1px solid var(--border);
+    padding: 4px 12px; border-radius: 999px; font-size: 13px; color: var(--muted);
+  }
+  .featured { border-color: var(--accent); }
+  .badge {
+    display: inline-block; background: var(--accent); color: #fff;
+    font-size: 12px; font-weight: 600; padding: 2px 10px; border-radius: 999px; margin-bottom: 10px;
+  }
+  .card a.link { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+  footer { border-top: 1px solid var(--border); padding: 32px 0; color: var(--muted); font-size: 14px; }
+  @media (max-width: 560px) { nav a:not(.logo) { margin-left: 12px; font-size: 14px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#inicio" class="logo">Jeanpierre</a>
+    <div>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="wrap">
+    <div class="tag">Ingeniería de Sistemas · Bogotá, Colombia</div>
+    <h1>Convierto datos y procesos en decisiones claras.</h1>
+    <p>[ESCRIBE AQUÍ 2 O 3 LÍNEAS: quién eres, en qué te quieres especializar y qué tipo de cargo buscas.]</p>
+    <div class="btns">
+      <a class="btn primary" href="#proyectos">Ver proyectos</a>
+      <a class="btn" href="#contacto">Contacto</a>
+    </div>
+  </div>
+</header>
+
+<section id="proyectos">
+  <div class="wrap">
+    <h2>Proyectos</h2>
+    <p class="sub">Trabajo en empresa y proyectos académicos.</p>
+
+    <!-- PROYECTO DESTACADO (empresa, PowerBI) -->
+    <div class="card featured">
+      <span class="badge">Proyecto en empresa</span>
+      <h3>[NOMBRE DEL TABLERO / PROYECTO POWER BI]</h3>
+      <div class="meta">[Empresa o sector] · [Fecha o duración]</div>
+      <p><strong>Problema:</strong> [qué necesitaba la empresa]</p>
+      <p><strong>Solución:</strong> [qué construiste y cómo]</p>
+      <p><strong>Resultado:</strong> [qué cambió gracias a esto]</p>
+      <div class="chips">
+        <span class="chip">Power BI</span>
+        <span class="chip">DAX</span>
+      </div>
+    </div>
+
+    <!-- PROYECTOS ACADÉMICOS: copia este bloque por cada uno -->
+    <div class="card">
+      <h3>[NOMBRE DEL PROYECTO]</h3>
+      <div class="meta">[Materia] · [Semestre]</div>
+      <p>[Descripción corta: problema, qué hiciste tú y resultado.]</p>
+      <div class="chips">
+        <span class="chip">[Tecnología]</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="habilidades">
+  <div class="wrap">
+    <h2>Habilidades</h2>
+    <p class="sub">Herramientas y áreas con las que trabajo.</p>
+    <div class="skills">
+      <div class="card">
+        <h3>Datos</h3>
+        <ul><li>Power BI</li><li>[Otras]</li></ul>
+      </div>
+      <div class="card">
+        <h3>Procesos y gestión</h3>
+        <ul><li>Modelado de procesos de negocio</li><li>Gobierno de datos</li></ul>
+      </div>
+      <div class="card">
+        <h3>Electrónica</h3>
+        <ul><li>Microcontroladores</li><li>Simulación</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <h2>Contacto</h2>
+    <p class="sub">Estoy buscando mi primera oportunidad profesional. Escríbeme.</p>
+    <div class="card">
+      <p>Correo: <a class="link" href="mailto:[TU CORREO]">[TU CORREO]</a></p>
+      <p>LinkedIn: <a class="link" href="[URL DE TU LINKEDIN]">[URL DE TU LINKEDIN]</a></p>
+      <p>GitHub: <a class="link" href="[URL DE TU GITHUB]">[URL DE TU GITHUB]</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Jeanpierre · Ingeniería de Sistemas</div>
+</footer>
+
+</body>
+</html>
